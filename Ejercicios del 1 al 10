@@ -1,0 +1,202 @@
+#  Leer un número entero y mostrar todos los enteros comprendidos entre 1 y el número leído.
+def ejercicio1():
+    def lectura_de_entero_positivo(valor):
+        try:
+            numero = int(float(valor))
+            if numero > 0:
+                return True, numero
+            else:
+                return False, None
+        except ValueError:
+            return False, None
+    entrada = input("Introduce un número entero + ejercicio1: ")
+    es_valido, numero = lectura_de_entero_positivo(entrada)
+    if es_valido:
+        print(f"Los enteros comprendidos entre 1 y {numero} son:")
+        for i in range(1, numero + 1):
+            print(i)
+    else:
+        print("La entrada no es válida. Por favor, introduce un número entero positivo.")
+
+ejercicio1()
+
+
+# Ejercicio 2:Leer un número entero y mostrar todos los pares comprendidos entre 1 y el número leído.
+
+def ejercicio2():
+    def es_entero_positivo(valor):
+        try:
+            numero = int(float(valor))  
+            if numero > 0:
+                return True, numero
+            else:
+                return False, None
+        except ValueError:
+            return False, None
+
+    entrada = input("Introduce un número entero positivo ejercicio2: ")
+    es_valido, numero = es_entero_positivo(entrada)
+    if es_valido:
+        print(f"Los números pares comprendidos entre 1 y {numero} son:")
+        for i in range(1, numero + 1):
+            if i % 2 == 0:
+                print(i)
+    else:
+        print("Entrada no válida. Por favor, introduce un número entero positivo.")
+
+ejercicio2()
+
+#Ejercicio 3: Leer un número entero y mostrar todos los divisores exactos del número comprendidos entre 1 y el número leído. 
+
+def ejercicio3():
+    print("Introduce un número que sea entero positivo pasar encontrar sus divisores exactos:")
+
+    def es_entero_positivo(valor):
+        try:
+            numero = int(float(valor))  
+            if numero > 0:
+                return True, numero
+            else:
+                return False, None
+        except ValueError:
+            return False, None
+    def es_divisor(numero, divisor):
+        return numero % divisor == 0
+    entrada = input("Introduce un número entero positivo para encontrar sus divisores: ")
+    es_valido, numero = es_entero_positivo(entrada)
+
+    if es_valido:
+        print(f"Los divisores exactos de {numero} son:")
+        for i in range(1, numero + 1):
+            if numero % i == 0:
+                print(i)
+    else:
+        print("Entrada no válida. Por favor, introduce un número entero positivo.")
+ejercicio3()
+
+#Ejercicio 4: Leer dos números y mostrar todos los enteros comprendidos entre ellos. 
+def ejercicio4():
+    print("Introducir dos números enteros para encontrar todos los enteros comprendidos entre ellos:")
+
+    def es_entero(valor):
+        try:
+            numero = int(float(valor)) 
+            return True, numero
+        except ValueError:
+            return False, None
+
+    entrada1 = input("Introduce el primer número entero ejercicio4: ")
+    es_valido1, numero1 = es_entero(entrada1)
+    entrada2 = input("Introduce el segundo número entero ejercicio4: ")
+    es_valido2, numero2 = es_entero(entrada2)
+
+    if es_valido1 and es_valido2:
+        if numero1 > numero2:
+            numero1, numero2 = numero2, numero1
+        print(f"Los enteros comprendidos entre {numero1} y {numero2} son:")
+        for i in range(numero1 + 1, numero2):
+            print(i)
+    else:
+        print("Entrada no válida. Por favor, introduce números enteros válidos.")
+
+ejercicio4()
+
+#Ejercicio 5: Leer dos números y mostrar todos los números terminados en 4 comprendidos entre ellos.
+def ejercicio5():
+    print("Introduce dos números enteros para encontrar todos los números terminados en 4 comprendidos entre ellos:")
+    
+    def es_entero(valor):
+        try:
+            numero = int(float(valor))
+            return True, numero
+        except ValueError:
+            return False, None
+
+    entrada1 = input("Introduce el primer número entero para el ejercicio 5: ")
+    es_valido1, numero1 = es_entero(entrada1)
+
+    entrada2 = input("Introduce el segundo número entero para el ejercicio 5: ")
+    es_valido2, numero2 = es_entero(entrada2)
+
+    if es_valido1 and es_valido2:
+        if numero1 > numero2:
+            numero1, numero2 = numero2, numero1
+        print(f"Los números terminados en 4 comprendidos entre {numero1} y {numero2} son:")
+        for i in range(numero1 + 1, numero2):
+            if i % 10 == 4:
+                print(i)
+    else:
+        print("Entrada no válida. Por favor, introduce números enteros válidos.")
+
+ejercicio5()
+
+
+
+#ejercicio 6. Leer un número entero de tres dígitos y mostrar todos los enteros comprendidos entre 1 y cada uno de los dígitos.
+def ejercicio6():
+    print("Introduce un número entero de tres dígitos:")
+    
+    def es_entero_tres_digitos(valor):
+        try:
+            numero = int(valor)
+            if 100 <= numero <= 999:
+                return True, numero
+            else:
+                return False, None
+        except ValueError:
+            return False, None
+    
+    entrada = input("Introduce un número entero de tres dígitos: ")
+    
+    
+    if es_entero:
+        digitos = [int(d) for d in str(numero)]
+        for i, digito in enumerate(digitos):
+            print(f"Los enteros comprendidos entre 1 y {digito} (dígito {i+1}) son:")
+            for j in range(1,  + 1):
+                print(j)digito
+    else:
+        print("Entrada no válida. Por favor, introduce un número entero de tres dígitos.")
+
+ejercicio6()
+
+
+#Ejercicio 7. Mostrar en pantalla todos los enteros comprendidos entre 1 y 100. 
+
+def ejercicio7():
+  print("Los enteros comprendidos entre 1 y 100 son:")
+  for i in range(1, 101):
+      print(i)
+ejercicio7()
+
+#Ejercicio 8. Mostrar en pantalla todos los pares comprendidos entre 20 y 200. 
+def ejercicio8():
+  print("Los números pares comprendidos entre 20 y 200 son:")
+  for i in range(20, 201):
+      if i % 2 == 0:
+          print(i)
+ejercicio8()
+
+#9. Mostrar en pantalla todos los números terminados en 6 comprendidos entre 25 y 205. 
+def ejercicio9():
+  print("Los números terminados en 6 comprendidos entre 25 y 205 son:")
+  for i in range(25, 206):
+      if i % 10 == 6:
+          print(i)
+ejercicio9()
+
+#Ejercicio 10. Leer un número entero y determinar a cuánto es igual la suma de todos los enteros comprendidos entre 1 y el número leído. 
+
+def ejercicio10():
+  print("Ingrese un número entero para determinar la suma de los enteros desde 1 hasta ese número:")
+  entrada = input("Ingresa el número entero: ")
+  try:
+      numero = int(entrada)
+      if numero < 1:
+          print("Por favor, ingrese un número entero positivo mayor o igual a 1.")
+          return
+      suma = numero * (numero + 1) // 2
+      print(f"La suma de todos los enteros comprendidos entre 1 y {numero} es: {suma}")
+  except ValueError:
+      print("Entrada no válida. Por favor, ingrese un número entero válido.")
+ejercicio10()
